@@ -36,14 +36,14 @@ export default function ListadoOdontologos() {
   }
 
   const manejarFavoritos = odontologo => {
-    if (esOdontologoFavorito(odontologo)) {
+    if (esFavorito(odontologo)) {
       eliminarOdontologoFavorito(odontologo)
     } else {
       agregarOdontologoFavorito(odontologo)
     }
   }
 
-  const esOdontologoFavorito = odontologo => {
+  const esFavorito = odontologo => {
     return odontologosFavoritos.some(
       odontologoFavorito => odontologoFavorito.id === odontologo.id
     )
@@ -57,7 +57,7 @@ export default function ListadoOdontologos() {
             key={odontologo.id}
             odontologo={odontologo}
             manejarFavoritos={manejarFavoritos}
-            esFavorito={esOdontologoFavorito(odontologo)}
+            esFavorito={esFavorito(odontologo)}
           />
         ))}
       </ul>
