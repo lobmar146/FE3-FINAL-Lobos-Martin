@@ -5,7 +5,7 @@ export default function Card(props) {
   const { odontologoFavorito, eliminarOdontologoFavorito } = props
 
   return (
-    <li>
+    <li className='card'>
       <img src={userImage} alt='Imagen de usuario' />
       <p>
         <span className='titulo'>Nombre:</span> {odontologoFavorito.name}
