@@ -5,6 +5,8 @@ export default function ElementosGlobalesProvider(props) {
   const { children } = props
   const [odontologos, setOdontologos] = useState([])
 
+  const [tema, setTema] = useState('oscuro')
+
   async function getOdontologos() {
     const response = await (
       await fetch('https://jsonplaceholder.typicode.com/users')
@@ -12,8 +14,22 @@ export default function ElementosGlobalesProvider(props) {
     setOdontologos(response)
   }
 
+  function cambiarTema() {
+    const root = document.documentElement
+    if (tema === 'claro') {
+      root.classList.remove('oscuro')
+      setTema('oscuro')
+    } else {
+      root.classList.add('oscuro')
+
+      setTema('claro')
+    }
+  }
+
   const valoresGlobales = {
-    odontologos
+    odontologos,
+    tema,
+    cambiarTema
   }
 
   // ni bien carga, llamo al get para tener los odontologos de manera global
