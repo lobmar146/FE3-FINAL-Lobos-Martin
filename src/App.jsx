@@ -7,6 +7,7 @@ import Favs from './routes/Favs'
 import Header from './components/Header'
 import ElementosGlobalesProvider from './context/ElementosGlobales'
 import DentistId from './routes/DentistId'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
             <Route path='/Dentis/:id' element={<DentistId />} />
           </Routes>
         </main>
-        <footer> Powered By Lobos Martín </footer>
+        <Footer />
       </ElementosGlobalesProvider>
     </>
   )

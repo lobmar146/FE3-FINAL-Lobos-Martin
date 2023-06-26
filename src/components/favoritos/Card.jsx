@@ -7,9 +7,16 @@ export default function Card(props) {
   return (
     <li>
       <img src={userImage} alt='Imagen de usuario' />
-      <p>Nombre: {odontologoFavorito.name}</p>
-      <p>User: {odontologoFavorito.username}</p>
+      <p>
+        <span className='titulo'>Nombre:</span> {odontologoFavorito.name}
+      </p>
+      <hr></hr>
+      <p>
+        <span className='titulo'>User:</span> {odontologoFavorito.username}
+      </p>
+      <hr></hr>
       <BsFillTrashFill
+        className='eliminar'
         onClick={() => eliminarOdontologoFavorito(odontologoFavorito)}
       />
     </li>

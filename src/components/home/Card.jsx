@@ -1,28 +1,47 @@
 import userImage from '../../assets/user.png'
-import { Link } from 'react-router-dom'
-
+import { Link, useNavigate } from 'react-router-dom'
 import { BsHeartFill, BsHeart, BsInfoCircle } from 'react-icons/bs'
+
 export default function Card(props) {
-  const { odontologo, estilosCorazones, manejarFavoritos } = props
+  const { odontologo, esFavorito, manejarFavoritos } = props
+
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    // Navegar al enlace al hacer clic en la tarjeta
+    // Puedes ajustar la ruta según tus necesidades
+    navigate(`/Dentis/${odontologo.id}`)
+  }
 
   return (
-    <li>
+    <li className='card' onClick={handleClick}>
       <img src={userImage} alt='Imagen de usuario' />
-      <p>Nombre: {odontologo.name}</p>
-      <p>User: {odontologo.username}</p>
+      <p>
+        <span className='titulo'>Nombre:</span> {odontologo.name}
+      </p>
+      <hr></hr>
+      <p>
+        <span className='titulo'>User:</span> {odontologo.username}
+      </p>
+      <hr></hr>
       <Link to={`/Dentis/${odontologo.id}`}>
-        {' '}
         <BsInfoCircle className='info' />
       </Link>
-      {estilosCorazones[odontologo.id] === 'favorito' ? (
+      {esFavorito ? (
         <BsHeartFill
-          className={estilosCorazones[odontologo.id]}
-          onClick={() => manejarFavoritos(odontologo)}
+          className='favorito'
+          onClick={e => {
+            e.stopPropagation() // Evitar la propagación del evento click a la tarjeta
+            manejarFavoritos(odontologo)
+          }}
         />
       ) : (
         <BsHeart
-          className={estilosCorazones[odontologo.id]}
-          onClick={() => manejarFavoritos(odontologo)}
+          className=''
+          onClick={e => {
+            e.stopPropagation() // Evitar la propagación del evento click a la tarjeta
+            manejarFavoritos(odontologo)
+          }}
         />
       )}
     </li>
