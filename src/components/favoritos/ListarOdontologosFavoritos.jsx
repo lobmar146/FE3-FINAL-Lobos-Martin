@@ -12,6 +12,7 @@ export default function ListarOdontologosFavoritos() {
     const nuevosFavoritos = odontologosFavoritos.filter(
       odontologo => odontologo.id !== odontologoAEliminar.id
     )
+
     setOdontologosFavoritos(nuevosFavoritos)
     localStorage.setItem(
       'odontologosFavoritos',
