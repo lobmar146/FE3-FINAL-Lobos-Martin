@@ -6,6 +6,7 @@
   --gris-oscuro: #1c1c1c;
   --gris-bordes: #ccc;
   --verde: #1ed55f;
+  --exito-fuente: #149441;
   --hover-ligth: #e8e0e0;
   --fuente-modo-oscuro: rgb(170, 170, 170);
   --red: #ff0000;
@@ -14,6 +15,8 @@
   --azul-claro: #0771ab;
   --azul-oscuro: #023e5a;
   --rojo-errores: rgba(255, 5, 5, 0.114);
+  --fuente-errores-claro: rgb(181, 52, 52);
+  --fuente-errores-oscuro: #de9b9b;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -216,7 +219,6 @@ button {
 form {
   display: flex;
   flex-direction: column;
-  margin-top: 2em;
   gap: 1em;
   border: 1px solid #ccc;
   padding: 30px;
@@ -264,12 +266,19 @@ input {
   padding: 10px;
 }
 
+.errores h2 {
+  color: var(--fuente-errores-claro);
+}
+
+.errores li {
+  color: var(--fuente-errores-claro);
+}
 .exito {
   font-size: large;
-  background-color: #149441;
+  background-color: var(--exito-fuente);
   border-radius: 20px;
   padding: 20px;
-  color: white;
+  color: rgb(215, 239, 215);
 }
 
 /* Estilos dark mode */
@@ -394,11 +403,25 @@ input {
 
 .oscuro .errores li {
   border: none;
-  color: var(--fuente-modo-oscuro);
+  color: var(--fuente-errores-oscuro);
+}
+.oscuro .errores h2 {
+  color: var(--fuente-errores-oscuro);
 }
 
+.errores li {
+  color: var(--fuente-errores-claro);
+}
+.exito {
+  font-size: large;
+  background-color: var(--exito-fuente);
+  border-radius: 20px;
+  padding: 20px;
+  color: rgb(215, 239, 215);
+}
 .oscuro .exito {
   background-color: #105428;
+  color: #92bba1;
 }
 /* animaciones y transiciones */
 @keyframes fade-in {

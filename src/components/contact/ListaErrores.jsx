@@ -1,11 +1,15 @@
 export default function ListaErrores(props) {
   const { errores } = props
   return (
-    <div className='errores'>
-      <h2>Ups.... parece qeu tenemos algunos errores</h2>
+    <div className='errores transition-element'>
+      <h2 className='transition-element'>
+        Ups.... parece qeu tenemos algunos errores
+      </h2>
       <ol>
         {errores.map(error => (
-          <li key={error.id}>{error.nombreError}</li>
+          <li className='transition-element' key={error.id}>
+            {error.nombreError}
+          </li>
         ))}
       </ol>
     </div>

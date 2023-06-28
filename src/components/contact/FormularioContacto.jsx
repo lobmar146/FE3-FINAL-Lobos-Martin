@@ -61,17 +61,17 @@ export default function FormularioContacto() {
 
       <form onSubmit={handleSubmit}>
         {' '}
-        {error.length === 0 ? undefined : <ListaErrores errores={error} />}
         <label htmlFor='nombre'>Nombre</label>
         <input type='text' id='nombre' value={nombre} onChange={changeNombre} />
         <label htmlFor='mail'>Mail</label>
         <input type='text' id='mail' value={mail} onChange={changeMail} />
         <button type='submit'>Enviar</button>
         {exito && (
-          <p className='exito'>
+          <p className='exito transition-element'>
             Gracias por comunicarse. En la brevedad le responderemos
           </p>
         )}
+        {error.length === 0 ? undefined : <ListaErrores errores={error} />}
       </form>
     </section>
   )
