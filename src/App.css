@@ -468,5 +468,6 @@ input {
 
   header nav {
     font-size: 10px;
+    gap: 15px;
   }
 }
