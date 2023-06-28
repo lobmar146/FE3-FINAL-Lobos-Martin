@@ -461,4 +461,12 @@ input {
   form {
     width: 80%;
   }
+
+  header h1 {
+    font-size: 5px;
+  }
+
+  header nav {
+    font-size: 10px;
+  }
 }
