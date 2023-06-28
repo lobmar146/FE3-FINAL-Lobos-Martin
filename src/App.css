@@ -434,6 +434,7 @@ input {
   li {
     width: 100%;
     margin-bottom: 0.5rem;
+    margi
   }
 
   .covers {
@@ -442,6 +443,7 @@ input {
   .covers li {
     padding: 1rem;
     width: 200px;
+    margin-right: 30px;
   }
 
   .section-cards {
