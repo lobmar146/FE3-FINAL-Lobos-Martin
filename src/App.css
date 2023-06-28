@@ -426,7 +426,13 @@ input {
   h2 {
     font-size: 15px;
   }
+  p {
+    font-size: 15px;
+  }
 
+  button {
+    font-size: 15px;
+  }
   svg.h1 {
     font-size: 20px;
   }
@@ -453,6 +459,6 @@ input {
   }
 
   form {
-    width: 90%;
+    width: 80%;
   }
 }
