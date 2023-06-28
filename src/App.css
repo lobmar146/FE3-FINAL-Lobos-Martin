@@ -414,67 +414,41 @@ input {
   animation: fade-in 700ms ease;
 }
 
-/* Estilos para pantallas medianas */
-@media (min-width: 768px) and (max-width: 1023px) {
-  header nav {
-    margin-right: 20px;
+/* Estilos para iPhone 12 */
+@media (max-width: 900px) and (max-height: 926px) {
+  header {
+    height: 60px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  svg.h1 {
+    font-size: 20px;
   }
 
   li {
-    width: 30%;
+    width: 100%;
+    margin-bottom: 0.5rem;
   }
+
   .covers {
-    flex-direction: column;
+    flex-direction: column !important;
+  }
+  .covers li {
+    padding: 1rem;
+    width: 200px;
   }
 
-  .covers li svg {
-    left: 50%;
-  }
-
-  .covers li svg.eliminar {
-    left: 70%;
-  }
-
-  .covers li svg.info {
-    left: 20%;
+  .section-cards {
+    gap: 1rem;
   }
 
   form {
-    width: 70%;
-  }
-
-  /* Estilos para pantallas pequeñas */
-  @media (min-width: 767px) {
-    header {
-      height: 70px;
-    }
-
-    header nav {
-      margin-right: 10px;
-    }
-
-    li {
-      width: 100%;
-      margin-bottom: 1rem;
-    }
-    .covers {
-      flex-direction: column;
-    }
-
-    .covers li svg {
-      left: 80%;
-    }
-
-    .covers li svg.info {
-      left: 60%;
-    }
-
-    .covers li svg.eliminar {
-      left: 90%;
-    }
-
-    form {
-      width: 90%;
-    }
+    width: 90%;
   }
 }
