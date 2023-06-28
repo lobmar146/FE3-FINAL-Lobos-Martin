@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <>
-      <section className='home'>
+      <section className='home transition-element'>
         {console.log(odontologos)}
         <h1>
           Este es el listados de Odontologos de la manada{' '}

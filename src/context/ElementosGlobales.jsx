@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from 'react'
 
 export const ElementosGlobales = createContext({})
+
 export default function ElementosGlobalesProvider(props) {
   const { children } = props
   const [odontologos, setOdontologos] = useState([])
@@ -33,7 +34,7 @@ export default function ElementosGlobalesProvider(props) {
   }
 
   // ni bien carga, llamo al get para tener los odontologos de manera global
-  useEffect(() => {
+  useEffect( () => {
     getOdontologos()
   }, [])
 

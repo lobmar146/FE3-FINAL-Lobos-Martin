@@ -10,11 +10,13 @@ export default function ListadoOdontologos() {
   )
 
   function agregarOdontologoFavorito(odontologoAgregar) {
+    // Chequeo que el odontologo no este asi no repito
     if (
       !odontologosFavoritos.some(
         odontologoFavorito => odontologoFavorito.id === odontologoAgregar.id
       )
     ) {
+      // Agrego el odontologo a favoritos
       const nuevosFavoritos = [...odontologosFavoritos, odontologoAgregar]
       setOdontologosFavoritos(nuevosFavoritos)
       localStorage.setItem(

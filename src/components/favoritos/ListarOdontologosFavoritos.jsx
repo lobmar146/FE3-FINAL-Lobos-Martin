@@ -24,7 +24,7 @@ export default function ListarOdontologosFavoritos() {
         <h1>
           Aun no marcado ningun miembro de la manada como favorito{' '}
           <GiWerewolf className='h1' />
-          <section className='not-found'>
+          <section className='not-found transition-element'>
             <BsFillSlashCircleFill />
           </section>
         </h1>
@@ -35,7 +35,7 @@ export default function ListarOdontologosFavoritos() {
         </h1>
       )}
 
-      <section className='section-cards-favoritos'>
+      <section className='section-cards-favoritos transition-element'>
         <ul className='covers'>
           {odontologosFavoritos.map(odontologoFavorito => (
             <Card

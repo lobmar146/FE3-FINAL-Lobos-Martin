@@ -34,7 +34,7 @@ export default function DentistId() {
           <article>
             <h2>{dentista.name}</h2>
             <p>{dentista.username}</p>
-            <p>Numero de amtricula: {dentista.id}</p>
+            <p>Numero de matricula: {dentista.id}</p>
           </article>
         </>
       )}

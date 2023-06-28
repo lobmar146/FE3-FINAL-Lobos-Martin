@@ -56,7 +56,7 @@ export default function FormularioContacto() {
   }
 
   return (
-    <section className='section-form'>
+    <section className='section-form transition-element'>
       <h2>Escribenos. Pronto un miembro de la manda se pondra en contacto </h2>
 
       <form onSubmit={handleSubmit}>
