@@ -438,7 +438,7 @@ input {
 }
 
 /* Estilos para iPhone 12 */
-@media (max-width: 400px) and (max-height: 926px) {
+@media (max-width: 415px) and (max-height: 926px) {
   header {
     height: 60px;
   }
